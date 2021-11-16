@@ -35,7 +35,7 @@ export default class Auth extends Component {
     }
 
     sendUser = (curUser) => {
-        postData("api.ashemuller.tk/", {name: curUser}).then(response => {
+        postData("https://m2nl5gp1l7.execute-api.eu-west-1.amazonaws.com/dist", {name: curUser}).then(response => {
             console.log(response);
         });
     }
