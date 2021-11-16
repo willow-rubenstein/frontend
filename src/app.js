@@ -4,7 +4,7 @@ import './index.css';
 
 export default class App extends Component {
     ircRedirect = () => {
-        window.location.href = "https://id.twitch.tv/oauth2/authorize?client_id=9nwnf5k3xyemgbb7gciwks04qi6co8&redirect_uri=http://localhost:3000/auth https://artoolkit.ashemuller.tk/auth&response_type=token&scope=chat:edit chat:read channel:moderate";
+        window.location.href = "https://id.twitch.tv/oauth2/authorize?client_id=9nwnf5k3xyemgbb7gciwks04qi6co8&redirect_uri=https://artoolkit.ashemuller.tk/auth&response_type=token&scope=chat:edit chat:read channel:moderate";
     }
 
     render() {
