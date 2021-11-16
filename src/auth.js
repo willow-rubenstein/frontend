@@ -1,6 +1,24 @@
 import {Component} from 'react';
 import './index.css';
 
+async function postData(url = '', data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
+
 export default class Auth extends Component {
     constructor(props) {
         super(props);
@@ -14,6 +32,12 @@ export default class Auth extends Component {
             this.bearerAuth = 'Bearer '+a[1];
             this.authProcess();
         }
+    }
+
+    sendUser = (curUser) => {
+        postData("https://m2nl5gp1l7.execute-api.eu-west-1.amazonaws.com/beta", {user: curUser}).then(response => {
+            console.log(response);
+        });
     }
 
     modBot = (user) => {
@@ -35,6 +59,7 @@ export default class Auth extends Component {
             client.mod(user, "artoolkit")
             .then(() => {
                 console.log("successfully modded bot in user's channel");
+                this.sendUser(user);
                 client.disconnect();
                 window.location.href = `/dashboard?user=${user}`;
             }).catch((err) => {
