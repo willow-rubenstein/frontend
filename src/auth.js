@@ -5,7 +5,7 @@ async function postData(url = '', data = {}) {
     // Default options are marked with *
     const response = await fetch(url, {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      mode: 'cors', // no-cors, *cors, same-origin
+      mode: 'same-origin', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
       credentials: 'same-origin', // include, *same-origin, omit
       headers: {
@@ -35,7 +35,7 @@ export default class Auth extends Component {
     }
 
     sendUser = (curUser) => {
-        postData("https://m2nl5gp1l7.execute-api.eu-west-1.amazonaws.com/beta", {name: curUser}).then(response => {
+        postData("api.ashemuller.tk/", {name: curUser}).then(response => {
             console.log(response);
         });
     }
