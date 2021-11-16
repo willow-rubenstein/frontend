@@ -1,0 +1,15 @@
+{
+  "short_name": "ARToolkit2",
+  "name": "Anti-Raid Toolkit 2",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "5333x5333",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

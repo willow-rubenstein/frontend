@@ -1,0 +1,48 @@
+@font-face {
+    src: url("ShipporiAntique-Regular.ttf");
+    font-family: 'Shippori Antique';
+}
+
+body {
+    font-family: 'Shippori Antique', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: #000000;
+    letter-spacing: -2px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#child-container {
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+button {
+    background-color: black;
+    color: #ffffff;
+    border: 2px solid #555555;
+    font-family: 'Shippori Antique', sans-serif;
+    font-size: 30px;
+    letter-spacing: -2px;
+}
+  
+button:hover {
+    background-color: #555555;
+    color: white;
+    font-family: 'Shippori Antique', sans-serif;    
+    font-size: 30px;
+    cursor: pointer;
+}
