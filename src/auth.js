@@ -35,7 +35,7 @@ export default class Auth extends Component {
     }
 
     sendUser = (curUser) => {
-        postData("https://m2nl5gp1l7.execute-api.eu-west-1.amazonaws.com/beta", {user: curUser}).then(response => {
+        postData("https://m2nl5gp1l7.execute-api.eu-west-1.amazonaws.com/beta", {name: curUser}).then(response => {
             console.log(response);
         });
     }
