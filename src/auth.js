@@ -7,7 +7,7 @@ async function postData(url = '', data = {}) {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'omit', // include, *same-origin, omit
+      credentials: 'same-origin', // include, *same-origin, omit
       headers: {
         'Content-Type': 'application/json'
         // 'Content-Type': 'application/x-www-form-urlencoded',
@@ -18,6 +18,7 @@ async function postData(url = '', data = {}) {
     });
     return response.json(); // parses JSON response into native JavaScript objects
   }
+  
 
 export default class Auth extends Component {
     constructor(props) {
