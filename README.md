@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Welcome to ARToolkit2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## WTF is this?
+- A few months ago, when the initial hoss attacks occured, I offered a solution to the community in the form of ARToolkit1
+- ARToolkit1 was incredibly slow and hard to update, and on top of that, included a lot of manual labor on my end and the user's end
+- ARToolkit2 will run 24/7 in the cloud, with completely customizable instances per-user
 
-## Available Scripts
+## Okay, so where TF is the bot?
+- The bot is closed-source until I secure proper licensing and copyright
+- The reason for this is due to the Streamlabs incident, as they also ripped off ARToolkit1 in their "ripping off other creators without crediting them" binge.
+- Otherwise, I usually have everything open-source
 
-In the project directory, you can run:
+## Cool, I want to use the bot. Do I need anything here?
+- Nope! This is just here for extra trust measures so you know *exactly* what the bot does.
+- This repo is the exact website you see at https://artoolkit.ashemuller.tk/, because AWS Amplify clones this every time I make a commit
 
-### `npm start`
+## What is the purpose of the "add" button on the site/What does it do
+Three steps:
+1) Gets permission to view and edit your chat + moderators
+2.) Mods "artoolkit", my bot user, for you
+3.) Adds you to my SQL user database so the backend knows to run your profile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Why did you add a dashboard even though nothing happens?
+- Nothing happens, yet.
+- I still need to work on uploading the backend and finishing it, which will take a while
+- This was where I was in production of the website when I was able to *not only* mod it in your chat, but send your username to my database as well, because there is no point in having moderation powers in a bunch of channels when you don't know what channels to moderate.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Discord server?
+- Soon!
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Patreon?
+- Absolutely at some point! AWS is not 100% free (unfortunately), and if the demand gets high enough, I'm going to unfortunately have to start paying bills :p
