@@ -50,7 +50,7 @@ export default class Auth extends Component {
                 updateEmotesetsTimer: 0,
             },
             identity: {
-                username: 'artoolkit',
+                username: user,
                 password: this.ircAuth
             },
             channels: [user]
