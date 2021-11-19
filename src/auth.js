@@ -34,13 +34,7 @@ export default class Auth extends Component {
             this.authProcess();
         }
     }
-
-    sendUser = (curUser) => {
-        postData("https://m2nl5gp1l7.execute-api.eu-west-1.amazonaws.com/dist", {name: curUser}).then(response => {
-            console.log(response);
-        });
-    }
-
+    
     modBot = (user) => {
         const tmi = require('tmi.js');
         const client = new tmi.Client({
@@ -60,9 +54,12 @@ export default class Auth extends Component {
             client.mod(user, "artoolkit")
             .then(() => {
                 console.log("successfully modded bot in user's channel");
-                this.sendUser(user);
-                client.disconnect();
-                window.location.href = `/dashboard?user=${user}`;
+                postData("https://m2nl5gp1l7.execute-api.eu-west-1.amazonaws.com/dist", {name: user}).then(
+                    client.disconnect().then(  
+                        window.location.href = `/dashboard?user=${user}`
+                    )
+                );
+                
             }).catch((err) => {
                 if (err === "bad_mod_mod") {
                     console.log("bot is already modded. returning back to home.")
