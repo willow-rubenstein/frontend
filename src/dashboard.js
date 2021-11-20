@@ -1,6 +1,9 @@
 import {Component} from 'react';
 import './dashboard.css';
 
+// Use account token as dashboard auth instead of username
+// How about if we just send the account token to the lambda function along with the request instead for authentication instead of
+// user-side auth LMAO
 export default class Dashboard extends Component {
     handleChange = event => {
         let elementName = event.target.name
